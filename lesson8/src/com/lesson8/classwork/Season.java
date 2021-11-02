@@ -2,7 +2,7 @@ package com.lesson8.classwork;
 
 public enum Season {
     Winter("Холодно"),
-    Spring("Цветение"),
+    Spring("Потепление"),
     Summer("Жарко"),
     Autumn("Дожди");
 
@@ -20,5 +20,3 @@ public enum Season {
         description = desc;
     }
 }
-
-
