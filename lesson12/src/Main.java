@@ -1,13 +1,13 @@
 public class Main {
     public static void main(String[] args) {
-        Thread chicken = new Chicken();
-        Thread egg = new Egg();
+        Thread chicken = new Thread(new Chicken());
+        Thread egg = new Thread(new Egg());
         chicken.start();
         egg.start();
     }
 }
 
-class Chicken extends Thread {
+class Chicken implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 50; i++) {
@@ -16,7 +16,7 @@ class Chicken extends Thread {
     }
 }
 
-class Egg extends Thread {
+class Egg implements Runnable {
     @Override
     public void run() {
         for (int i = 0; i < 50; i++) {
